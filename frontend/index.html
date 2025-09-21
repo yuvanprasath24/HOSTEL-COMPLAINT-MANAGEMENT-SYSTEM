@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KCT Login Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-white font-poppins overflow-hidden p-4">
+
+  <div class="flex flex-col md:flex-row w-full max-w-6xl rounded-3xl shadow-2xl overflow-hidden bg-white/40 backdrop-blur-md border border-gray-300 transition-all duration-300">
+
+    <!-- LEFT SIDE -->
+    <div class="hidden md:flex flex-col justify-center items-center w-1/2 bg-white/60 p-10 gap-4 text-center">
+      <img src="/imags/kct logo.jpeg" alt="KCT Logo" class="w-40 h-auto mb-4">
+      <h2 class="text-2xl font-bold text-gray-700">Kumaraguru College of Technology</h2>
+      <p class="text-gray-600 text-sm">Empowering students, parents & staff with secure and smart access.</p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="w-full md:w-1/2 flex flex-col items-center justify-center gap-8 p-10">
+
+      <!-- Selection Screen -->
+      <div id="selectionScreen" class="w-full max-w-sm text-center space-y-6">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome Back 👋</h1>
+        <p class="text-gray-600">Please select your login type</p>
+        <button id="studentLoginBtn" class="w-full bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 text-white py-3 px-6 rounded-xl shadow-md transition-all duration-300">Continue as Student</button>
+        <button id="adminLoginBtn" class="w-full bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 text-white py-3 px-6 rounded-xl shadow-md transition-all duration-300">Continue as Admin</button>
+        <button id="parentLoginBtn" class="w-full bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-300 text-white py-3 px-6 rounded-xl shadow-md transition-all duration-300">Continue as Parent</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="loginForm" class="hidden w-full max-w-sm bg-white p-8 rounded-xl shadow-md space-y-5 mt-4">
+        <h2 id="loginHeading" class="text-2xl font-semibold text-center text-gray-800"></h2>
+        <form id="actualLoginForm" class="space-y-4">
+          <input type="email" id="email" placeholder="Email" required class="input" />
+          <input type="text" id="userId" placeholder="" class="input hidden" />
+          <input type="password" id="password" placeholder="Password" required class="input" />
+          <button type="submit" id="submitLogin" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl shadow transition-all duration-300">Login</button>
+        </form>
+        <button id="backBtn" class="w-full text-gray-500 mt-2 hover:underline transition">← Back</button>
+        <div id="errorMessage" class="text-red-500 text-sm hidden text-center" style="opacity: 0;"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/javascript/script.js"></script>
+</body>
+</html>

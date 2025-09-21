@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="/styles/student.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1 class="sidebar-title">Student Panel</h1>
+      <button onclick="showSection('submitSection')" class="sidebar-btn">Submit Complaint</button>
+      <button onclick="showSection('viewSection')" class="sidebar-btn">View Complaints</button>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Submit Complaint Section -->
+      <section id="submitSection">
+        <h2 class="section-title">Submit Complaint</h2>
+        <form onsubmit="submitComplaint(event)" class="complaint-form">
+          <input type="text" id="studentid" placeholder="Student ID" required class="form-input" />
+          <select id="type" required class="form-input">
+            <option value="" disabled selected>Select Complaint Type</option>
+            <option>Hostel Maintenance Issues</option>
+            <option>Wi-Fi / Internet Connectivity Problems</option>
+            <option>Canteen Food Quality / Hygiene</option>
+            <option>Classroom Infrastructure (e.g., fans, projectors)</option>
+            <option>Faculty Misconduct or Unavailability</option>
+            <option>Library Access or Book Availability Issues</option>
+            <option>Exam / Marks Related Discrepancies</option>
+            <option>Ragging or Harassment Complaints</option>
+            <option>Fee Payment or Scholarship Issues</option>
+            <option>Transport / Bus Facility Complaints</option>
+            <option>Others</option>
+          </select>
+          <input type="text" id="subject" placeholder="Subject" required class="form-input" />
+          <input type="text" id="blockNo" placeholder="Block NO" required class="form-input" />
+          <input type="text" id="roomNo" placeholder="Room NO" required class="form-input" />
+          <textarea id="description" placeholder="Description" required class="form-input" rows="4"></textarea>
+          <input type="file" id="image" accept="image/*" class="form-input" />
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </section>
+
+      <!-- View Complaints Section -->
+      <section id="viewSection" class="hidden">
+        <h2 class="section-title">Your Complaints</h2>
+        <div class="table-wrapper">
+          <table class="complaint-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Student ID</th>
+                <th>Type</th>
+                <th>Subject</th>
+                <th>Block No</th>
+                <th>Room No</th>
+                <th>Description + Image</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="complaintsTableBody">
+              <!-- Data will be injected here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="/javascript/student.js"></script>
+</body>
+</html>

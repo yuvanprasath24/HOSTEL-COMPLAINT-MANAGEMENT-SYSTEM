@@ -1,0 +1,31 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  color: #1f2937; /* gray-800 */
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(107, 114, 128, 0.6); /* gray-500 */
+}
+
+.input:focus {
+  border-color: #2563eb; /* blue-600 */
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* blue ring */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}
