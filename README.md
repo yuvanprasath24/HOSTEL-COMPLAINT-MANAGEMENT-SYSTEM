@@ -6,7 +6,7 @@
 ## Setup Instructions:
 - Clone the Repository
     ```bash
-    git clone https://github.com/<your-username>/Campus-management.git
+    git clone https://github.com/yuvanprasath24/HOSTEL-COMPLAINT-MANAGEMENT-SYSTEM
     cd Campus-management
 
 
